@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= content_for?(:title) ? yield(:title) : "Thehappylittebook"
+      %title= content_for?(:title) ? yield(:title) : "The Happy Litte Book"
       %meta{:content => content_for?(:description) ? yield(:description) : "Thehappylittebook", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
@@ -16,10 +16,13 @@
     #main{:role => "main"}
       .container
         .content
-          .row
-            .span12
+          .row-fluid
+            .span3{style: "background-color: red"}
+              = image_tag "carrito.png", width: "150px"
+            .span9
               = render 'layouts/messages'
               = yield
+
           %footer
       / ! end of .container
     / ! end of #main

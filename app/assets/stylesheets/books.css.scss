@@ -1,0 +1,55 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.list-book ul{
+  list-style-type: none;
+}
+
+li.item-list-book{
+  margin-top: 20px;
+}
+
+li.item-list-book .title p.isbn{
+  font-size: 0.8em;
+  margin-top: -5px;
+  }
+
+li.item-list-book .title .authors{
+  font-size: 0.9em;
+  }
+
+li.item-list-book .title  p.publiser{
+  font-size: 0.8em;
+  margin-top: -10px;
+}
+
+li.item-list-book .title p.description{
+  font-size: 0.9em;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+li.item-list-book .price{
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+}
+
+li.item-list-book .row-fluid .book-item-footer{
+  margin-top: 40px;
+}
+
+li.item-list-book .book-item-footer button{
+  margin-top: 2%;
+}
+
+hr.books-separator{
+  border-bottom: 1px solid rgb(98, 98, 253);
+  margin: 30px 0 40px
+}
+
+.pagination-centered{
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+%h2 Catálogo de Libros
+
+.list-book
+  %ul
+    - @books.each do |book|
+      %li.item-list-book= render "book_list_item", book: book
+      %hr{class: "books-separator"}
+%br
+
+= paginate @books

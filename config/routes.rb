@@ -1,4 +1,7 @@
 TheHappyLitteBook::Application.routes.draw do
+  resources :books
+
+
   authenticated :user do
     root :to => 'home#index'
   end
