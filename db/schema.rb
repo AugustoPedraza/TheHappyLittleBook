@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121101153) do
+ActiveRecord::Schema.define(:version => 20130122012644) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -28,7 +28,23 @@ ActiveRecord::Schema.define(:version => 20130121101153) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
-  create_table "books", :force => true do |t|
+  create_table "authors", :primary_key => "author_id", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "authors", ["last_name", "first_name"], :name => "index_authors_on_last_name_and_first_name", :unique => true
+
+  create_table "authors_books", :id => false, :force => true do |t|
+    t.integer "author_id"
+    t.integer "book_id"
+  end
+
+  add_index "authors_books", ["author_id", "book_id"], :name => "index_authors_books_on_author_id_and_book_id"
+
+  create_table "books", :primary_key => "book_id", :force => true do |t|
     t.string   "title",        :null => false
     t.text     "description",  :null => false
     t.text     "isbn13",       :null => false
@@ -40,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20130121101153) do
 
   add_index "books", ["isbn13"], :name => "index_books_on_isbn13", :unique => true
   add_index "books", ["title", "edition"], :name => "index_books_on_title_and_edition", :unique => true
+
+  create_table "books_authors", :id => false, :force => true do |t|
+    t.integer "book_id"
+    t.integer "author_id"
+  end
+
+  add_index "books_authors", ["book_id", "author_id"], :name => "index_books_authors_on_book_id_and_author_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
