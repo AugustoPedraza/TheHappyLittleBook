@@ -4,6 +4,8 @@ class CreatePublishers < ActiveRecord::Migration
       t.string :name
       t.timestamps
     end
+    
+    add_index :publishers, :publisher_id
     add_foreign_key "books", "publishers", :name => "books_publishers_id_fk", :primary_key => "publisher_id"
   end
 end

@@ -9,4 +9,13 @@ class ApplicationController < ActionController::Base
    redirect_to admin_root_path unless current_user.has_role? :admin
   end
 
+  private
+    def current_cart
+      #Fixme: use the method find_or_create
+      Cart.find(session[:cart_id])
+      rescue ActiveRecord::RecordNotFound
+      cart = Cart.create
+      session[:cart_id] = cart.id
+      cart
+    end
 end
