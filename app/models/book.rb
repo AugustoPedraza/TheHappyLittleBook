@@ -5,6 +5,7 @@ class Book < ActiveRecord::Base
 
   has_and_belongs_to_many :authors
   belongs_to :publisher
+  has_many   :book_inventories
 
   attr_accessible :description, :edition, :isbn13, :published_at, :title, :publisher_id
 

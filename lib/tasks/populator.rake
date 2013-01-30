@@ -13,8 +13,8 @@ namespace :db do
     puts "Se han eliminado #{Publisher.destroy_all.count} editoriales."
 
     puts "\n"*3
-    puts "Creando libros..."
-    
+    puts "Creando editoriales..."
+
     publishers_counter = ""
 
     10.times do |i|
@@ -23,7 +23,7 @@ namespace :db do
       puts publishers_counter
     end
     puts "\n"
-    puts "Se crearon #{publishers_counter.size} autores..."
+    puts "Se crearon #{publishers_counter.size} editoriales..."
 
     puts "\n"*3
     puts "Creando libros..."
@@ -44,6 +44,55 @@ namespace :db do
 
     puts "\n"
     puts "Se crearon #{books_counter.size} libros..."
+
+    puts "\n"*3
+    puts "Creando inventariado de libros..."
+
+    book_inventory_counter = ""
+
+    Book.all.each do |book|
+      quantity        = rand(3..12)
+      purchase_price  = rand(100.00..250.99)
+      purchased_units = quantity + rand(3..5)
+
+      inventory_hash = {
+        purchase_price:   purchase_price,
+        sale_price:       (purchase_price * rand(10.0..50.0)),
+        quantity:         quantity,
+        purchased_units:  purchased_units,
+        solds_units:      (purchased_units - quantity)
+      }
+
+      book.book_inventories.build(inventory_hash)
+      book.save!
+      book_inventory_counter << "."
+      puts book_inventory_counter
+    end
+
+    books_id = Book.all.map(&:id)
+
+    17.times do
+      quantity        = rand(3..12)
+      purchase_price  = rand(100.00..250.99)
+      purchased_units = quantity + rand(3..5)
+
+      inventory_hash = {
+        purchase_price:   purchase_price,
+        sale_price:       (purchase_price * rand(10.0..50.0)),
+        quantity:         quantity,
+        purchased_units:  purchased_units,
+        solds_units:      (purchased_units - quantity)
+      }
+
+      book = Book.find(books_id.sample)
+      book.book_inventories.build(inventory_hash)
+      book.save!
+      book_inventory_counter << "."
+      puts book_inventory_counter
+    end
+
+    puts "\n"
+    puts "Se crearon #{book_inventory_counter.size} inventarios..."
 
     puts "\n"*3
     puts "Creando autores..."
