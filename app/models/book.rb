@@ -4,8 +4,9 @@ class Book < ActiveRecord::Base
   default_scope order('published_at')
 
   has_and_belongs_to_many :authors
+  belongs_to :publisher
 
-  attr_accessible :description, :edition, :isbn13, :published_at, :title
+  attr_accessible :description, :edition, :isbn13, :published_at, :title, :publisher_id
 
   validates :description,      presence: true
   validates :edition,          presence: true

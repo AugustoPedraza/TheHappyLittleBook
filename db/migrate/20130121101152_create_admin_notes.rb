@@ -1,6 +1,6 @@
 class CreateAdminNotes < ActiveRecord::Migration
   def self.up
-    create_table :admin_notes do |t|
+    create_table :admin_notes, primary_key: "admin_note_id" do |t|
       t.string :resource_id, :null => false
       t.string :resource_type, :null => false
       t.references :admin_user, :polymorphic => true

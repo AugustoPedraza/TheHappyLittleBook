@@ -6,7 +6,7 @@ class CreateBooks < ActiveRecord::Migration
       t.text    :isbn13,           null: false, uniqueness: true
       t.date    :published_at,     null: false
       t.integer :edition,          null: false
-
+      t.integer :publisher_id
       t.timestamps
     end
 

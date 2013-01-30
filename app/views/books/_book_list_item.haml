@@ -5,11 +5,12 @@
       .span9.title
         %h5= book.full_name
         %p.isbn= "ISBN-13: #{book.isbn13}"
-        %p.publiser= "Editorial: <b>My publisher</b> ".html_safe
+        %p.publiser!= "Editorial: <b>#{book.publisher.name}</b>"
         %p.publiser= "Fecha publicación: <b>#{book.published_at.strftime("%d %B %Y")}</b> ".html_safe
         .authors
           %span Authors
-          = ["Jean Pean", "Alberto Olmedo", "Jorge Bucay"].map{ |a| link_to a, "#" }.join(" ").html_safe
+          != book.authors.map{ |author| link_to author.full_name, "#" }.join(" ")
+          / = ["Jean Pean", "Alberto Olmedo", "Jorge Bucay"].map{ |a| link_to a, "#" }.join(" ").html_safe
         %p.description= book.description
       .span3.image.pagination-centered
         = image_tag "0#{(book.id % 10)}.jpg", width: "200px"
