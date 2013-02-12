@@ -18,6 +18,9 @@
 
 $(document).ready(function() {
   addToolTipToCart();
+
+  //Cart edition
+  bindChangeQuantity();
 });
 
 function addToolTipToCart(){
@@ -28,10 +31,52 @@ function addToolTipToCart(){
         origin.data('tooltipsterContent', $('#hidden-cart').html());
         continueTooltip();
       },
-      functionAfter:  function(origin) {
-        console.log("function after");
-      },
       theme: '.tooltipster-light',
       interactive: true
     });
+}
+
+function bindChangeQuantity(){
+  if ($('table#cart-edition').length > 0){
+    $("li#cart").hide();
+  }
+
+  $('table#cart-edition tr.item-data td input[type=number].quantity')
+    .each(function(index, element){
+      $(element).change(function(){
+        calculateTotal();
+      })
+    })
+}
+
+
+function calculateTotal(tr){
+  var amount = 0;
+  var items = 0;
+
+  $('table#cart-edition tr.item-data')
+    .each(function(index, element){
+      var quantity  = 0;
+      var unitPrice = 0.0;
+      var subtotal  = 0.0;
+
+      quantity  = parseInt($(element).find('input[type=number].quantity').val());
+      unitPrice = parseFloat($(element).find('td.price').text());
+      console.log(unitPrice);
+      subtotal  = quantity * unitPrice;
+
+      $(element).find('td.subtotal').text(parseFloat(Math.round(subtotal * 100) / 100).toFixed(2));
+
+      items  += quantity;
+      amount += subtotal;
+    });
+
+    amount = parseFloat(Math.round(amount * 100) / 100).toFixed(2);
+  $('td#items-total').fadeOut(500, function() {
+      $(this).text(items).fadeIn(500);
+  });
+
+  $('td#amount-total').fadeOut(500, function() {
+      $(this).text("$ " + amount).fadeIn(500);
+  });
 }

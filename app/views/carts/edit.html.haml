@@ -1,7 +1,43 @@
-%h1 Editing cart
+%p#notice= notice
 
-= render 'form'
+- if @cart
+  %table#cart-edition{border: '0px'}
+    %tr
+      %th Quantity
+      %th{style: 'width: 300px'} Book
+      %th Price
+      %th{align: 'right'} Subtotal
+      %th
+    %tr{height: '20px'}
+      %td{colspan: 5}
 
-= link_to 'Show', @cart
-\|
-= link_to 'Back', carts_path
+    - @cart.cart_items.each do |item|
+
+      %tr.item-data
+        %td{align: 'center'}= number_field_tag('name', value = item.quantity, min: 0, max: 10, step: 1, class: 'quantity')
+        %td{align: 'left', style: 'width: 300px; padding-left: 50px'}= item.book_inventory.book.full_name
+        %td{align: 'center',  class: 'price'}= item.price 
+        %td.subtotal{align: 'right',  class: 'subtotal'}= item.subtotal
+        %td= #hidden_field_tag
+
+    %tr{height: '30px'}
+      %td{colspan: 5}
+
+    %tr{height: '20px'}
+      %td{colspan: 3, align: 'right'} Products:
+      %td{align: 'right', id: 'items-total'}= @cart.items_count
+      %td
+
+    %tr{height: '20px'}
+      %td{colspan: 3, align: 'right'} Total:
+      %td{align: 'right', id: 'amount-total'}= "$ #{number_with_precision(@cart.total, precision: 2)}"
+      %td
+
+    - if @cart
+      %tr{height: '20px'}
+        %td{colspan: 5}
+
+      %tr.cart-actions
+        %td{colspan: 3}= button_to 'Cancel', books_path, class: 'btn-danger', method: 'get'
+        %td{colspan: 2}= button_to 'Make purchase', '#', class: 'btn-success'
+%br

@@ -9,6 +9,10 @@ class CartItem < ActiveRecord::Base
   attr_accessible :quantity
 
   def subtotal
-    book_inventory.sale_price * quantity
+    price * quantity
+  end
+
+  def price
+    book_inventory.sale_price
   end
 end

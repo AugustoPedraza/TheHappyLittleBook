@@ -25,6 +25,12 @@ li#cart p{
 table#cart-detail tr.item-data td.subtotal{
   padding-right: 36px;
 }
+
 table#cart-detail tr.cart-actions td form{
   margin-bottom: -15px;
+}
+
+table#cart-edition tr.item-data td input[type=number].quantity {
+  width: 40px;
+  text-align: center;
 }

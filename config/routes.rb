@@ -4,7 +4,6 @@ TheHappyLitteBook::Application.routes.draw do
 
   resources :carts
 
-
   ActiveAdmin.routes(self)
   devise_for :users, ActiveAdmin::Devise.config
 

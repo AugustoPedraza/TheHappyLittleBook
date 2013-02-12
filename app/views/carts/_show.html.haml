@@ -36,6 +36,6 @@
         %td{colspan: 4}
 
       %tr.cart-actions
-        %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info'
+        %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info', method: 'get'
         %td{colspan: 2}= button_to 'Make purchase', '#', class: 'btn-success'
 %br
