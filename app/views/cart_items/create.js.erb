@@ -1,0 +1,5 @@
+$('#hidden-cart').html('<%=escape_javascript(render "carts/show", cart: current_cart, layout: false) %>');
+
+$('#cart p').fadeOut(500, function() {
+    $(this).text('<%= current_cart.items_count %>').fadeIn(500);
+});

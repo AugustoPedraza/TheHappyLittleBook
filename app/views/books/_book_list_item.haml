@@ -10,38 +10,14 @@
         .authors
           %span Authors
           != book.authors.map{ |author| link_to author.full_name, "#" }.join(" ")
-          / = ["Jean Pean", "Alberto Olmedo", "Jorge Bucay"].map{ |a| link_to a, "#" }.join(" ").html_safe
         %p.description= book.description
       .span3.image.pagination-centered
         = image_tag "0#{(book.id % 10)}.jpg", width: "200px"
 
     .row-fluid.book-item-footer
       .span3
-        = button_tag "Agregar a carrito", class: "btn btn-primary"
+        = button_to "Agregar a carrito", cart_items_path(book_inventory_id: book.current_price.id), remote: true, class: "btn btn-primary"
       .span6
       .span3
         .price.alert.alert-info
-          %p= "Precio: $ #{rand(123..232)}.#{rand(00..99)}"
-
-
-
-/ .col-wrapper
-/   .row-fluid
-/     .span8.col{style: "background-color: green"}
-/       .title
-/         %h4= book.full_name
-/         %p.isbn= "ISBN-13: #{book.isbn13}"
-/         %p.publiser= "Editorial: <b>My publisher</b> ".html_safe
-/         %span.title Authors
-/         %ul.authors
-/           - ["Jean Pean", "Alberto Olmedo", "Jorge Bucay"].each do |author|
-/             %li=author
-/         %p.price= "Precio: $ #{rand(123..232)}.#{rand(00..99)}"
-/     .span4.col.pagination-centered{style: "background-color: yellow "}
-/       = image_tag "0#{(book.id / 100)}.jpg", width: "200px"
-/   .row-fluid
-/     .span12.col{style: "background-color: orange"}
-/       .summary
-/         %p= book.description
-/       = button_tag "Agregar a carrito"
-
+          %p= "$ #{number_with_precision(book.current_price.sale_price, precision: 2)}"

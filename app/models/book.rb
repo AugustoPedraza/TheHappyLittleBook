@@ -3,7 +3,8 @@
 class Book < ActiveRecord::Base
   default_scope order('published_at')
 
-  has_and_belongs_to_many :authors
+  has_and_belongs_to_many :authors#,:delete_sql =>
+# "DELETE FROM developers_projects WHERE active=1 AND developer_id = #{id} AND project_id = #{record.id}"
   belongs_to :publisher
   has_many   :book_inventories
 
@@ -24,4 +25,9 @@ class Book < ActiveRecord::Base
   def full_name
     title + " (#{edition}° edición)"
   end
+
+  def current_price
+    book_inventories.first
+  end
+
 end

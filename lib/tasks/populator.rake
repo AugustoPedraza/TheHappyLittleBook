@@ -3,6 +3,7 @@ require 'faker'
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do    
+    BookInventory.destroy_all
     puts "Eliminando libros existentes.."
     puts "Se han eliminado #{Book.destroy_all.count} libros."
     puts "\n"
@@ -54,10 +55,11 @@ namespace :db do
       quantity        = rand(3..12)
       purchase_price  = rand(100.00..250.99)
       purchased_units = quantity + rand(3..5)
+      sale_price      = (purchase_price * rand(0.1..0.62)) + purchase_price
 
       inventory_hash = {
         purchase_price:   purchase_price,
-        sale_price:       (purchase_price * rand(10.0..50.0)),
+        sale_price:       sale_price,
         quantity:         quantity,
         purchased_units:  purchased_units,
         solds_units:      (purchased_units - quantity)

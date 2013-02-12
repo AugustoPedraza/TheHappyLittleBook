@@ -1,0 +1,41 @@
+%p#notice= notice
+
+- if cart
+  %table#cart-detail{border: '0px'}
+    %tr
+      %th Quantity
+      %th{style: 'width: 300px'} Book
+      %th Subtotal
+      %th
+    %tr{height: '20px'}
+      %td{colspan: 4}
+
+    - cart.cart_items.each do |item|
+
+      %tr.item-data
+        %td{align: 'center'}= item.quantity
+        %td{align: 'left', style: 'width: 300px; padding-left: 50px'}= item.book_inventory.book.full_name
+        %td.subtotal{align: 'right'}= item.subtotal
+        %td
+
+    %tr{height: '30px'}
+      %td{colspan: 4}
+
+    %tr{height: '20px'}
+      %td{colspan: 2, align: 'right'} Products:
+      %td{align: 'right'}= cart.items_count
+      %td
+
+    %tr{height: '20px'}
+      %td{colspan: 2, align: 'right'} Total:
+      %td{align: 'right'}= "$ #{number_with_precision(cart.total, precision: 2)}"
+      %td
+
+    - if cart
+      %tr{height: '20px'}
+        %td{colspan: 4}
+
+      %tr.cart-actions
+        %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info'
+        %td{colspan: 2}= button_to 'Make purchase', '#', class: 'btn-success'
+%br

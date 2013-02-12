@@ -11,6 +11,27 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui-1.10.0.custom.js
 //= require jquery_ujs
-//= require bootstrap
-//= require_tree .
+//= require bootstrap.min.js
+//= require jquery.tooltipster.min.js
+
+$(document).ready(function() {
+  addToolTipToCart();
+});
+
+function addToolTipToCart(){
+  $('#cart a:first').tooltipster(
+    {
+      trigger: 'click',
+      functionBefore: function(origin, continueTooltip) {
+        origin.data('tooltipsterContent', $('#hidden-cart').html());
+        continueTooltip();
+      },
+      functionAfter:  function(origin) {
+        console.log("function after");
+      },
+      theme: '.tooltipster-light',
+      interactive: true
+    });
+}

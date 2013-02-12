@@ -1,0 +1,10 @@
+Feature: Agregar a carrito
+ - Agregar un formulario remoto para agregar a carrito.
+   El formulario, tiene que contener como parámetros a enviar, el id del libro, y el id del precio actual.
+ - Desde el backend, tengo que tener la función, comprobar que la operación con los valores especificados sean válidos, y crear el carrito (si no existe), y si no existe una linea con esas características, crear una nueva. Si ya existe, debo aumentarle la cantidad.
+- Para actualizar, tengo que actualizar la parte del carrito.
+
+
+NOTAS:
+
+  - Como se definió que un libro puede tener varios precios simultaneos, lo que se debería hacer es mostrar el precio más viejo (que tenga stock), para cada libro. Y cuando vaya a agregarlo al carrito, en caso que ese precio ya no sea válido (no hay stock), informar al usuario de dicho suceso, y mostrar el precio más nuevo.

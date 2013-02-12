@@ -11,18 +11,18 @@
   %body{:class => "#{controller_name} #{action_name}"}
     %header.navbar.navbar-fixed-top
       %nav.navbar-inner
-        .container
+        .container.main-menu
           = render 'layouts/navigation'
     #main{:role => "main"}
       .container
         .content
           .row-fluid
-            .span3{style: "background-color: red"}
-              = image_tag "carrito.png", width: "150px"
-            .span9
+            .span12
               = render 'layouts/messages'
               = yield
 
           %footer
+    #hidden-cart{style: "display: none;"}
+      = render 'carts/show', cart: current_cart, layout: false
       / ! end of .container
     / ! end of #main
