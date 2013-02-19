@@ -2,7 +2,20 @@ require 'faker'
 
 namespace :db do
   desc "Fill database with sample data"
-  task :populate => :environment do    
+  task :populate => :environment do
+    Role.destroy_all
+    puts 'ROLES'
+    YAML.load(ENV['ROLES']).each do |role|
+      Role.find_or_create_by_name({ :name => role }, :without_protection => true)
+      puts 'role: ' << role
+    end
+
+    User.destroy_all
+    puts 'DEFAULT USERS'
+    user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
+    puts 'user: ' << user.name
+    user.add_role :admin
+
     BookInventory.destroy_all
     puts "Eliminando libros existentes.."
     puts "Se han eliminado #{Book.destroy_all.count} libros."

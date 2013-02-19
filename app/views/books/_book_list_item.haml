@@ -16,8 +16,8 @@
 
     .row-fluid.book-item-footer
       .span3
-        = button_to "Agregar a carrito", cart_items_path(book_inventory_id: book.current_price.id), remote: true, class: "btn btn-primary"
+        = button_to "Agregar a carrito", cart_items_path(book_id: book.id), remote: true, class: "btn btn-primary"
       .span6
       .span3
         .price.alert.alert-info
-          %p= "$ #{number_with_precision(book.current_price.sale_price, precision: 2)}"
+          %p= "$ #{number_with_precision(book.current_price, precision: 2)}"

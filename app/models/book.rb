@@ -3,8 +3,9 @@
 class Book < ActiveRecord::Base
   default_scope order('published_at')
 
-  has_and_belongs_to_many :authors#,:delete_sql =>
-# "DELETE FROM developers_projects WHERE active=1 AND developer_id = #{id} AND project_id = #{record.id}"
+  scope :with_stock, joins(:book_inventories).where("book_inventories.quantity > 0").order("created_at ASC")
+
+  has_and_belongs_to_many :authors
   belongs_to :publisher
   has_many   :book_inventories
 
@@ -27,7 +28,10 @@ class Book < ActiveRecord::Base
   end
 
   def current_price
-    book_inventories.first
+    book_inventories.last.sale_price
   end
 
+  def available_stock
+    book_inventories.last.quantity
+  end
 end

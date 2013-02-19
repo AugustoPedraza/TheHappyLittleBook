@@ -1,18 +1,29 @@
 class CartItem < ActiveRecord::Base
   belongs_to :cart
-  belongs_to :book_inventory
+  belongs_to :book
 
-  scope :find_by_book_inventory, lambda { |inventory_id| where(book_inventory_id: inventory_id) }
+  scope :find_by_book, lambda { |book_id| where(book_id: book_id) }
 
-  validates :cart, :book_inventory, presence: true
+  default_scope order(:created_at)
 
-  attr_accessible :quantity
+  validates :cart, :book, presence: true
+
+  attr_accessible :quantity, :price
 
   def subtotal
     price * quantity
   end
 
   def price
-    book_inventory.sale_price
+    book.current_price
   end
+
+  def update_quantity(value)
+    new_quantity = (value <= book.available_stock ? value : book.available_stock)
+    update_attribute(:quantity, new_quantity)
+  end
+  #Funcionalidad movida al controller.
+  # def available_quantity
+  #   book_inventory.quantity
+  # end
 end

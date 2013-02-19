@@ -8,7 +8,29 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin_user!
-   redirect_to admin_root_path unless current_user.has_role? :admin
+    redirect_to admin_root_path unless current_user.has_role? :admin
+    # unless current_user
+    #   puts "="*50
+    #   puts "Sin usuario..."
+    #   puts "="*50
+    #   redirect_to new_user_session_path
+    # else
+    #   if current_user.has_role? :admin
+    #     puts "="*50
+    #     puts "Usuario admin"
+    #     puts "="*50
+    #     redirect_to admin_root_path
+    #   else
+    #     puts "="*50
+    #     puts "Usuario comun..."
+    #     puts "="*50
+    #     redirect_to root_path
+    #   end
+    # end
+  end
+
+  def after_sign_in_path_for(resource_or_scope)
+    root_path
   end
 
   private

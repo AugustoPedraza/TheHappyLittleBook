@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130092727) do
+ActiveRecord::Schema.define(:version => 20130219005500) do
 
   create_table "active_admin_comments", :primary_key => "admin_note_id", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,19 +72,21 @@ ActiveRecord::Schema.define(:version => 20130130092727) do
   add_index "books", ["title", "edition"], :name => "index_books_on_title_and_edition", :unique => true
 
   create_table "cart_items", :primary_key => "cart_item_id", :force => true do |t|
-    t.integer  "book_id"
-    t.integer  "book_inventory_id"
     t.integer  "cart_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
+    t.integer  "quantity",                                 :default => 1,   :null => false
+    t.integer  "book_id",                                                   :null => false
+    t.decimal  "price",      :precision => 8, :scale => 2, :default => 0.0, :null => false
   end
 
   add_index "cart_items", ["cart_item_id"], :name => "index_cart_items_on_cart_item_id"
 
   create_table "carts", :primary_key => "cart_id", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "is_purchase", :default => false, :null => false
   end
 
   add_index "carts", ["cart_id"], :name => "index_carts_on_cart_id"
@@ -142,7 +144,6 @@ ActiveRecord::Schema.define(:version => 20130130092727) do
 
   add_foreign_key "books", "publishers", :name => "books_publishers_id_fk", :primary_key => "publisher_id"
 
-  add_foreign_key "cart_items", "book_inventories", :name => "cart_items_book_inventories_id_fk", :primary_key => "book_inventory_id"
   add_foreign_key "cart_items", "books", :name => "cart_items_books_id_fk", :primary_key => "book_id"
   add_foreign_key "cart_items", "carts", :name => "cart_items_carts_id_fk", :primary_key => "cart_id"
 

@@ -8,36 +8,45 @@
       %th Price
       %th{align: 'right'} Subtotal
       %th
+      %th
     %tr{height: '20px'}
-      %td{colspan: 5}
+      %td{colspan: 6}
 
     - @cart.cart_items.each do |item|
 
-      %tr.item-data
-        %td{align: 'center'}= number_field_tag('name', value = item.quantity, min: 0, max: 10, step: 1, class: 'quantity')
-        %td{align: 'left', style: 'width: 300px; padding-left: 50px'}= item.book_inventory.book.full_name
-        %td{align: 'center',  class: 'price'}= item.price 
+      %tr.item-data{"item-id-data" => item.id, "available-stock-data" => item.book.available_stock}
+        %td{align: 'center'}= number_field_tag('name', value = item.quantity, min: 1, step: 1, class: 'quantity')
+        %td{align: 'left', class: "book-name", style: 'width: 300px; padding-left: 50px'}= item.book.full_name
+        %td{align: 'center',  class: 'price'}= item.price
         %td.subtotal{align: 'right',  class: 'subtotal'}= item.subtotal
-        %td= #hidden_field_tag
+        %td
+        %td
+          %a.remove-book{ href: "#", title: "Eliminar libro"}
+            %span.badge.badge-important x
 
     %tr{height: '30px'}
-      %td{colspan: 5}
+      %td{colspan: 6}
 
     %tr{height: '20px'}
-      %td{colspan: 3, align: 'right'} Products:
+      %td{colspan: 4, align: 'right'} Products:
       %td{align: 'right', id: 'items-total'}= @cart.items_count
       %td
 
     %tr{height: '20px'}
-      %td{colspan: 3, align: 'right'} Total:
+      %td{colspan: 4, align: 'right'} Total:
       %td{align: 'right', id: 'amount-total'}= "$ #{number_with_precision(@cart.total, precision: 2)}"
       %td
 
-    - if @cart
-      %tr{height: '20px'}
-        %td{colspan: 5}
+    %tr{height: '20px'}
+      %td{colspan: 6}
 
-      %tr.cart-actions
-        %td{colspan: 3}= button_to 'Cancel', books_path, class: 'btn-danger', method: 'get'
-        %td{colspan: 2}= button_to 'Make purchase', '#', class: 'btn-success'
+    %tr#alert-section{height: '20px'}
+      %td{colspan: 6}
+
+    %tr{height: '20px'}
+      %td{colspan: 6}
+
+    %tr.cart-actions
+      %td{colspan: 4}= button_to 'Cancel', books_path, class: 'btn-danger', method: 'get'
+      %td{colspan: 2}= button_to 'Make purchase', '#', 'url-data' => cart_path(@cart), id: 'create-new-purchase', 'url-redirect-data' => books_url, class: 'btn-success btn-make-purchase'
 %br

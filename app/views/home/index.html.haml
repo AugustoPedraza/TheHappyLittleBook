@@ -1,4 +1,7 @@
-%h3 Home
+%h3 Usuarios registrados
 - @users.each do |user|
   %p
-    User: #{link_to user.name, user}
+    User: #{link_to user.name, users_path(user)}
+
+%h3 Usuario Actual
+%h1= current_user ? current_user.name : "nil.. :("
