@@ -1,3 +1,4 @@
 Cuando cree una factura de compra, o venta, tengo que hacer los callbacks necesarios para manejar la cantidad automáticamente.
 
-Permitir el borrado de items en el carrito.
+
+Tambien, tengo que dejar el precio de venta ya fijado...

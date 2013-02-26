@@ -1,17 +1,19 @@
 = link_to "The Happy Litte Book", root_path, :class => 'brand'
 %ul.nav.pull-right
-  %li#cart
-    = link_to "#" do
-      %p= current_cart ? current_cart.items_count : 0
+  - if current_cart
+    %li#cart
+      = link_to "#" do
+        %p= current_cart ? current_cart.items_count : 0
   - unless user_signed_in?
     %li= link_to 'Login', new_user_session_path
     %li= link_to 'Sign up', new_registration_path
   - else
-    %li= "Bienvenido, #{current_user.name}"
+    %li{style: "margin-top: 10px"}= "Bienvenido, #{current_user.name}"
     %li.dropdown
       %a.dropdown-toggle{href: "#", "data-toggle" => "dropdown"}
         Account
         %b.caret
       %ul.dropdown-menu
+        %li= link_to 'Show purchases', purchases_path
         %li= link_to 'Edit account', edit_registered_user_path(current_user)
         %li= link_to 'Logout', destroy_user_session_path, :method=>'delete'

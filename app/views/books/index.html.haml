@@ -8,3 +8,6 @@
 %br
 
 = paginate @books
+
+- content_for :hidden_cart do
+  = render 'carts/show', cart: current_cart, layout: false

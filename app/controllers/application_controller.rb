@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin_user!
-    redirect_to admin_root_path unless current_user.has_role? :admin
+    puts "="*50
+    puts "El usuario tiene role admin???"
+    puts current_user.has_role? :admin
+    puts "="*50
+    redirect_to new_user_session_path unless current_user.has_role? :admin
     # unless current_user
     #   puts "="*50
     #   puts "Sin usuario..."
@@ -36,10 +40,13 @@ class ApplicationController < ActionController::Base
   private
     def current_cart
       #Fixme: use the method find_or_create
-      Cart.find(session[:cart_id])
+      begin
+        cart = Cart.find(session[:cart_id])
       rescue ActiveRecord::RecordNotFound
-      cart = Cart.create
-      session[:cart_id] = cart.id
+        cart = Cart.create
+        session[:cart_id] = cart.id
+      end
+
       cart
     end
 end

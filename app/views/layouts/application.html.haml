@@ -23,6 +23,6 @@
 
           %footer
     #hidden-cart{style: "display: none;"}
-      = render 'carts/show', cart: current_cart, layout: false
+      = yield(:hidden_cart)
       / ! end of .container
     / ! end of #main

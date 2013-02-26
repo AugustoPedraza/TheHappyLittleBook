@@ -26,19 +26,30 @@ $(document).ready(function() {
 });
 
 function bindMakePurchase(){
-  var $btn = $('#create-new-purchase');
+  var $btn = $('input[type=submit].btn-make-purchase');
 
-  if ($btn.length == 0){return;}
+  if ($btn.length == 0){console.log("no encontrado...");return;}
 
   var url = $btn.attr('url-data');
 
   $btn.on('click', function(jsEvent){
     var jsonObj = [];
 
+    //Busqueda en tabla de edicion
     $('table#cart-edition tr[item-id-data]').each(function(index, tr){
       var $tr  = $(tr);
       itemId   = parseInt($(tr).attr('item-id-data'));
       quantity = parseInt($tr.find('td input[type=number].quantity').val());
+
+      var obj  = {"id": itemId, "quantity": quantity};
+      jsonObj.push(obj);
+    });
+
+    //Busqueda en tooltip cart.
+    $('table#cart-detail tr[item-id-data]').each(function(index, tr){
+      var $tr  = $(tr);
+      itemId   = parseInt($(tr).attr('item-id-data'));
+      quantity = parseInt($tr.find('td.quantity').text());
 
       var obj  = {"id": itemId, "quantity": quantity};
       jsonObj.push(obj);
@@ -57,6 +68,7 @@ function addToolTipToCart(){
       functionBefore: function(origin, continueTooltip) {
         origin.data('tooltipsterContent', $('#hidden-cart').html());
         continueTooltip();
+        bindMakePurchase();
       },
       theme: '.tooltipster-light',
       interactive: true

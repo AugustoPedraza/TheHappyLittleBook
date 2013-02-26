@@ -1,5 +1,6 @@
 %p#notice= notice
 
+
 - if cart
   %table#cart-detail{border: '0px'}
     %tr
@@ -12,8 +13,8 @@
 
     - cart.cart_items.each do |item|
 
-      %tr.item-data
-        %td{align: 'center'}= item.quantity
+      %tr.item-data{"item-id-data" => item.id, "available-stock-data" => item.book.available_stock}
+        %td.quantity{align: 'center'}= item.quantity
         %td{align: 'left', style: 'width: 300px; padding-left: 50px'}= item.book.full_name
         %td.subtotal{align: 'right'}= item.subtotal
         %td
@@ -35,7 +36,8 @@
       %tr{height: '20px'}
         %td{colspan: 4}
 
-      %tr.cart-actions
-        %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info', method: 'get'
-        %td{colspan: 2}= button_to 'Make purchase', '#', class: 'btn-success'
+      -if cart.items_count > 0
+        %tr.cart-actions
+          %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info', method: 'get'
+          %td{colspan: 2}= button_to 'Make purchase', '#', 'url-data' => cart_path(cart), 'url-redirect-data' => books_url, class: 'btn-success btn-make-purchase'
 %br

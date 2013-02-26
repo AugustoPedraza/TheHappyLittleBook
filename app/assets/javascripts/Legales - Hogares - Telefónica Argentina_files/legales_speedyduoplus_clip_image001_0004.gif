@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Revisit" content="1 days">
+<meta name="identifier-url" content="http://www.telefonica.com.ar">
+<meta name="abstract" content="Portal Telef&oacute;nica en la Argentina">
+<meta name="distribution" content="Global">
+<meta name="copyright" content="©2010 Telef&oacute;nica S.A.">
+<meta name="robots" content="FOLLOW,INDEX">
+<meta name="googlebot" content="FOLLOW,INDEX">
+<meta name="author" CONTENT="Federico Stellato | Sa&uacute;l G&oacute;mez">
+<meta name="verify-v1" content="FN7+5sxP4IHcX/Y/QEYyJWqSFgZbJr/61O1QkYw6bMs=" />
+<meta name="google-site-verification" content="BGLkRQS2Wl_md1gqPqakXzj9uy1XsbH6iL8fnUAuCSs" />
+<meta http-equiv="Content-Language" content="ES">
+    
+<meta NAME="description" CONTENT="Error 404">
+<meta NAME="keywords" CONTENT="transformaci&oacute;n, liderazgo, innovaci&oacute;n, calidad, comunicaci&oacute;n, Telef&oacute;nica, Argentina, prensa, accionistas, inversores, responsabilidad corporativa, sostenibilidad, patrocinios, Fundaci&oacute;n Telef&oacute;nica">
+
+<title>Telef&oacute;nica de Argentina | Acerca de Telef&oacute;nica – Error 404</title>
+
+<script type="text/javascript" src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/js/dinamica.js"></script>
+<link rel="shortcut icon" href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/favicon.ico" type="image/x-icon"/>
+<style>
+/* NORMALIZACION */
+* {margin:0; padding:0; border:0}
+img {border:none; margin:0; padding:0}
+body {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:68.75%; color:#555555; background-color:#000000}  /* Tipo base: 11px */
+
+/* ELEMENTOS COMUNES */
+a {text-decoration:none; color:#259DCD}
+a:hover {text-decoration:underline}
+a.a_popup {padding-right:13px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lnk_externo.gif) right 3px no-repeat}
+a.a_pdf {padding-right:22px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lnk_pdf.gif) right 2px no-repeat}
+p {padding:0 0 5px 0}
+.pequeno {font-size:0.9em}
+.grande {font-size:1.1em}
+.ico_rss {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_rss.gif) right 1px no-repeat;}
+.color_link {color:#4ab3ff}
+.error {color:#fe0000}
+.lnk_destacado {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr01.png) no-repeat left 0; font-size:1.27em; color:#259DCD; padding:0 0 2px 26px; display:inline-block}
+.lnk_destacado:hover {text-decoration:underline}
+img.lnk_externo,
+img.lnk_pdf {display:inline}
+
+ul.ul_destacado {}
+ul.ul_destacado li {list-style-type:none; background:none; padding:0 0 5px 0}
+ul.ul_destacado li a {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr01.png) no-repeat left 0; font-size:1.27em; color:#259DCD; padding:0 0 2px 26px; display:inline-block}
+ul.ul_destacado li a:hover {text-decoration:underline}
+.clear {display:block; clear:both; height:0px; font-size:1px}
+.hide {display:none}
+
+
+/* //////////////////////////////////////////////////////////////////// */
+
+#general {font-size:1em; position:relative; z-index:10; height:100%; margin:0 auto 0 auto}
+#general #cabecera {}
+#general #contenido #cont_izq {}  /* Columna izquierda (navegacion vertical, etc) */
+#general #contenido #cont_der {position:relative; float:right; width:679px; min-height:300px}  /* Columna derecha (contenido) */
+#general #contenido #cont_100 {clear:both; width:100%; overflow:hidden}  /* Columna unica ancho total (contenido) */
+#contenido {
+    clear: both;
+    margin: 0 auto;
+    padding: 0 54px 35px;
+    position: relative;
+    width: 895px;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+#cabecera {width:100%; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_cabecera.png) center top no-repeat}
+#cabecera-interior {width:925px; padding:0 39px 0 39px; margin:0 auto 0 auto}
+#cabecera a {color:#5dcde9; text-decoration:none}
+#cabecera a:hover {text-decoration:underline}
+
+#cabecera #logo {float:left; width:203px; height:70px; margin:40px 0 0 -10px}
+
+#cabecera #nav {float:right; height:100%; width:720px; padding-bottom:52px; color:#ffffff}
+.int #cabecera #nav {padding-bottom:77px}
+#cabecera #nav #titulo_microsite {color:#5dcde9; font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-weight:normal; font-size:5em; padding:0 0 7px 0; margin:-5px 0 -3px 0; line-height:60px; float: right}
+#cabecera #nav #titulo_microsite a {text-decoration:none}
+#cabecera #nav #titulo_microsite a:hover {text-decoration:none}
+#cabecera #nav #titulo_microsite h1 {font-size:1em; font-weight:normal; padding:0}
+
+#cabecera #nav #navsup {width:100%; height:100%; font-family:Verdana, Arial, Helvetica, sans-serif}
+#cabecera #nav #navsup #navsup-interior {float:none}
+
+#cabecera #nav #navsup #brands {position:relative; z-index:100000; float:left; padding:10px 25px 0 0}
+#cabecera #nav #navsup #brands #a_brands {position:relative; z-index:10000; color:#5dcde9; padding:0 14px 0 0; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_flecha01.png) right 5px no-repeat}
+#cabecera #nav #navsup #brands #a_brands.activo {color:#ffffff; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_flecha01up_on.png) right 5px no-repeat}
+#cabecera #nav #navsup #brands #capa_brands {position:absolute; z-index:1000; top:0; left:-20px; width:110px; padding:55px 20px 10px 20px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_capa01.jpg) 0 0 no-repeat}
+#cabecera #nav #navsup #brands #capa_brands ul {}
+#cabecera #nav #navsup #brands #capa_brands li {list-style-type:none; padding:0 0 30px 0; margin:0; background:none; text-align:center}
+#cabecera #nav #navsup #brands #capa_brands li a {width:110px; cursor:pointer; text-indent:-100000px}
+a.lgo_telefonica {display:block; height:30px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lgo_telefonica.png) 0 0 no-repeat}
+a.lgo_movistar {display:block; height:65px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lgo_movistar.png) 0 0 no-repeat}
+a.lgo_o2 {display:block; height:56px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lgo_o2.png) 0 0 no-repeat}
+a.lgo_terra {display:block; height:58px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lgo_terra.png) 0 0 no-repeat}
+
+#cabecera #nav #navsup #worldwide {position:relative; z-index:100000; float:left; padding:10px 25px 0 0}
+#cabecera #nav #navsup #worldwide #a_worldwide {position:relative; z-index:10000; color:#5dcde9; padding:0 14px 0 0; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_flecha01.png) right 5px no-repeat}
+#cabecera #nav #navsup #worldwide #a_worldwide.activo {color:#ffffff; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_flecha01up_on.png) right 5px no-repeat}
+#cabecera #nav #navsup #worldwide #capa_worldwide {position:absolute; z-index:1000; top:0; left:-20px; width:622px; padding:50px 20px 0 20px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_capa01.jpg) 0 0 no-repeat}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises {width:420px; padding:0 0 15px 0; border-right:1px solid #1a5c77}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul {}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li {list-style-type:none; display:block; float:left; width:120px; margin:0; padding:0 20px 6px 0; font-family:'TelefonicaTextRegular', Arial, Helvetica, sans-serif; font-size:1.36em; line-height:1em}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li a.activo {color:#ffffff; cursor:default}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li a.activo:hover {text-decoration:none}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li ul {display:none; position:absolute; top:50px; left:472px}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li ul li {font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-size:1.4em; line-height:1em}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li ul li a {display:block; padding:0 0 4px 25px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr02.png) 0 4px no-repeat}
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li ul li a:hover,
+#cabecera #nav #navsup #worldwide #capa_worldwide .paises ul li ul li a.activo {color:#ffffff; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr04.png) 0 8px no-repeat; text-decoration:none}
+
+#cabecera form {display: block; float: right}
+#cabecera #nav #navsup #buscador {float:right; padding:7px 0 0 20px; margin:0 0 0 0}
+#cabecera #nav #navsup #buscador label {float:left; margin:3px 5px 0 0}
+#cabecera #nav #navsup #buscador input.textbox {float:left; width:172px; margin:0 3px 0 0; color:#ffffff; padding:2px 2px 4px 2px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_buscador.png) 0 0 repeat; font-size:1em; font-family:Verdana, Arial, Helvetica, sans-serif}
+#cabecera #nav #navsup #buscador input.btn_buscar {float:left; width:24px; height:24px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_lupa01.png) 0 0 no-repeat; cursor:pointer; padding:22px 0 0 0}
+#cabecera #nav #navsup #buscador #buscador_vacio {width: 242px}
+
+#cabecera #nav #navsup #idiomas {float:left; text-align:right; width:140px; padding:12px 0 0 0; line-height:0.9em}
+#cabecera #nav #navsup #idiomas ul {list-style-type:none; margin-left:-6px}
+#cabecera #nav #navsup #idiomas ul li {list-style-type:none; display:block; float:left; padding:0 6px 0 0; border-right:1px solid #5dcde9; margin:0 0 0 6px}
+#cabecera #nav #navsup #idiomas ul li.last {padding:0; border:none}
+#cabecera #nav #navsup #idiomas ul li a {position:relative}
+.micro_int #cabecera #nav #navsup #idiomas,
+.micro #cabecera #nav #navsup #idiomas {float:right; width:auto}
+
+#cabecera #nav #navinf {height:100%; width:100%; overflow:hidden; padding:50px 0 0 0; clear:both}
+#cabecera #nav #navinf ul {width:auto; float:right; margin:0 -9px 0 0; padding:0; display:block; font-family:'TelefonicaTextRegular', Arial, Helvetica, sans-serif; font-size:1.8em}
+#cabecera #nav #navinf ul li {float:left; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_sepnavinf.gif) right 3px no-repeat; margin:0; padding:0 9px 4px 9px; display:block; list-style-type:none; color:#ffffff; line-height:1.05em}
+#cabecera #nav #navinf ul li a:hover {color:#ffffff; text-decoration:none}
+#cabecera #nav #navinf ul li.activo {color:#ffffff}
+
+.at #cabecera #nav #navinf ul li.navinf_at a,
+.at_int #cabecera #nav #navinf ul li.navinf_at a,
+.po #cabecera #nav #navinf ul li.navinf_po a,
+.po_int #cabecera #nav #navinf ul li.navinf_po a,
+.ir #cabecera #nav #navinf ul li.navinf_ir a,
+.ir_int #cabecera #nav #navinf ul li.navinf_ir a,
+.cr #cabecera #nav #navinf ul li.navinf_cr a,
+.cr_int #cabecera #nav #navinf ul li.navinf_cr a,
+.in #cabecera #nav #navinf ul li.navinf_in a,
+.in_int #cabecera #nav #navinf ul li.navinf_in a,
+.sp #cabecera #nav #navinf ul li.navinf_sp a,
+.sp_int #cabecera #nav #navinf ul li.navinf_sp a,
+.fa #cabecera #nav #navinf ul li.navinf_sp a,
+.fa_int #cabecera #nav #navinf ul li.navinf_sp a,
+.ft #cabecera #nav #navinf ul li.navinf_ft a,
+.ft_int #cabecera #nav #navinf ul li.navinf_ft a {color:#ffffff}
+
+#cabecera #nav #titulo_microsite {color:#5DCDE9; float:right; font-family:'TelefonicaHeadlineLightRegula',Arial,Helvetica,sans-serif; font-size:5em; font-weight:normal; line-height:60px; margin-bottom:-3px; margin-left:0; margin-right:0; margin-top:-5px; padding-bottom:7px; padding-left:0; padding-right:0; padding-top:0;}
+
+
+#titulo_pagina {display:block; font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-weight:normal; margin:0; padding:0 0 34px 0; line-height:1.1em; font-size:4.54em; letter-spacing:-0.02em; color:#ffffff}
+.int #titulo_pagina {color:#00517c}
+
+.cont_entradilla {margin:-25px 0 0 0; padding:8px 0 34px 0; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/gfx/bgd_entradilla.png) 0 top repeat-x; clear:both; color:#00517c}
+.cont_entradilla.entradillacorta {width:400px}
+.cont_entradilla p {font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-weight:normal; font-size:1.7em; padding:0 0 10px 0; margin:0; color:#ffffff; width:600px}
+.cont_entradilla.entradillacorta p {width:400px}
+.cont_entradilla .entradilla {font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-weight:normal; padding:0 0 20px 0; margin:0; line-height:1.2em; font-size:1.7em; color:#ffffff}
+.cont_entradilla .lnk_destacado {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr04.png) no-repeat left 0; font-size:1.27em; color:#ffffff; padding:0 0 2px 26px; display:inline-block}
+.cont_entradilla .lnk_destacado:hover {text-decoration:underline}
+.int .cont_entradilla {color:#555555; background:none}
+.int .cont_entradilla p {color:#555555}
+.int .cont_entradilla .entradilla {color:#555555}
+.int .cont_entradilla .lnk_destacado {color:#259dcd; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flechaAr01.png) no-repeat left 0}
+.int .cont_entradilla .lnk_destacado:hover {text-decoration:underline}
+
+.cont_entradilla {
+    background: url("http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_entradilla.png") repeat-x scroll 0 top transparent;
+    clear: both;
+    color: #00517C;
+    margin: -25px 0 0;
+    padding: 8px 0 34px;
+}
+
+#contenido_hoja_top {width:925px; height:42px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_contenido_hoja_top.png) 0 0 no-repeat; margin:0 0 0 -15px;}
+#contenido_hoja {width:895px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/gfx/bgd_contenido_hoja.png) 0 0 repeat; padding:15px 15px 0 15px; margin:0 0 0 -15px; height:100%}
+.int #contenido_hoja_top {display:none}
+.int #contenido_hoja {position:static; background:none; padding:0; margin:0}
+.index #contenido_hoja_top {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/gfx/bgd_contenido_hoja_top_home.png) 0 0 no-repeat}
+.index #contenido_hoja {background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/gfx/bgd_contenido_hoja_home.png) 0 0 repeat}
+#contenido_hoja {
+    background: url("http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_contenido_hoja.png") repeat scroll 0 0 transparent;
+    height: 100%;
+    margin: 0 0 0 -15px;
+    padding: 15px 15px 0;
+    width: 895px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.modulo {background:#ffffff; padding:11px 11px 0 11px; margin:0 0 15px 0; height:100%; color:#555555; clear: both}
+.int .modulo {padding:9px 9px 0 9px; border:1px solid #eeeeee}
+.modulo.junto {margin-bottom:-1px}
+.modulo a {color:#259dcd}
+.modulo img {display:block; margin:0; padding:0; border:0}
+.modulo img.lnk_externo,
+.modulo img.lnk_pdf {display:inline}
+
+.modulo .top .titulo {position:relative; font-family:'TelefonicaHeadlineLightRegula', Arial, Helvetica, sans-serif; font-weight:normal; font-size:2.18em; color:#555555; float:left; padding:0 0 5px 0; margin:-5px 0 0 0}
+.modulo .top .titulo a {color:#259dcd}
+.modulo .top .titulo a:hover {text-decoration:underline}
+.modulo .top .titulo a.desplegar {padding:0 0 0 34px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_desplegar.gif) 0 13px no-repeat}
+.modulo .top .titulo a.desplegar:hover {text-decoration:underline}
+.modulo .top .titulo a.plegar {padding:0 0 0 34px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/ico_plegar.gif) 0 13px no-repeat}
+.modulo .top .titulo a.plegar:hover {text-decoration:underline}
+.modulo .top .titulo .sep_vert {display:inline-block; width:31px; text-indent:-100000px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/sep_vert01.gif) 15px 3px no-repeat}
+.modulo .med {
+    padding: 0 0 11px;
+}
+
+#redes_sociales {padding: 10px 0 10px 0; overflow: hidden;}
+#redes_sociales a {display: inline-block; float: left; margin-right: 10px;}
+
+#raiz {color:#489cb1; white-space:nowrap; clear:both; padding:0; height:100%}
+#raiz .estasen {float:left; margin-right:5px; color:#489cb1}
+#raiz ul {list-style-type:none; height:100%}
+#raiz ul li {list-style-type:none; display:inline}
+#raiz ul li a {padding-right:8px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flecha04.gif) right 5px no-repeat; margin-right:1px}
+#raiz ul li span {padding-right:8px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/blt_flecha04.gif) right 5px no-repeat; margin-right:1px}
+#raiz strong {font-weight:normal}
+#raiz .deshabilitado {color:#7a8728}
+#raiz .actual {color:#ffffff}
+.int #raiz {color:#00517c; padding-bottom:20px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_contenido_interior.gif) left bottom no-repeat; margin-bottom:5px}
+.int #raiz .estasen {color:#00517c}
+.int #raiz ul li a {color:#259dcd}
+.int #raiz .deshabilitado {color:#00517C}
+.int #raiz .actual {color:#00517c}
+
+.degrade #general {
+    background: url("http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/DECO/bgd_body_degrade.jpg") no-repeat scroll center top transparent;
+}
+
+/* PIE */
+
+#pie {width:100%; height:115px; background:url(http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_pie.png) center top no-repeat; color:#ffffff; clear:both}
+#pie-interior {width:925px; padding:85px 15px 0 15px; margin:0 auto 0 auto}
+#pie a {color:#5dcde9}
+#pie span {float:left; line-height:0.9em}
+#pie ul {list-style-type:none; float:left}
+#pie ul li {display:block; float:left; padding:0 0 0 6px; border-left:1px solid #5dcde9; margin:0 0 0 6px; line-height:0.9em}
+
+/* MAPA DE SITIO PIE */
+
+#pie {background: url("http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_pie.png") no-repeat scroll center top transparent;clear: both;color: #FFFFFF;height: 115px;margin-bottom: -1px;width: 100%;}
+#pie-interior {margin: 0 auto;padding: 85px 15px 0;width: 925px;}
+#pie_map {background: url("http://www.telefonica.com.ar/corporativo/acercadetelefonica/css/GFX/bgd_site_map.gif") repeat scroll center top transparent;}
+#pie_site_map {border-top: 1px solid #999999;margin: 0 auto;padding: 10px 15px 20px 15px!important;width: 925px; overflow: auto;}
+#pie_site_map .col_enlaces {display: inline;float: left;height: auto !important;margin: 0 0 0 15px!important;min-height: 200px;padding: 1px 0 10px 6px;}
+#pie_site_map .first {border: medium none;margin-left: 0;padding-left: 0;}
+#pie_site_map .second {border: medium none;height: auto !important;min-height: 120px;}
+#pie_site_map .titulo_enlaces {color: #FFFFFF;font-family: Arial,Helvetica,sans-serif;font-size: 14px;margin: 0 0 5px;padding: 0;position: relative;}
+#pie_site_map .titulo_enlaces a {color: #FFFFFF!important;}
+ul.ul_enlaces_home {color: #259DCD;font-family: Arial,Helvetica,sans-serif;margin: 0;padding: 0;}
+ul.ul_enlaces_home li {list-style: none!important;}
+
+</style>
+
+</head>
+<body class="degrade" onload="abrirMenu();">
+<div id="general">
+    <div id="cabecera">
+      <div id="cabecera-interior">
+        <div id="logo"> <a href="http://www.telefonica.com.ar" accesskey="1"><img src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/lgo_telefonica_main.gif" alt="Logotipo de Telef&oacute;nica. Ir a la página de inicio [Tecla de acceso directo + 1]" /></a> </div>
+        <!-- Fin de #logo -->
+        <p class="hide"><a href="#cont_der" accesskey="0">Saltar la navegaci&oacute;n e ir directamente al contenido [Tecla de acceso directo + 0]</a></p>
+        <div id="nav">
+        			<div id="navsup">
+				<div id="navsup-interior">
+					<div id="brands"> <a id="a_brands" href="http://www.telefonica.com/es/telefonica_brands/at_identidad_marcas.shtml" title="Ir a Nuestras Marcas">Nuestras Marcas</a>
+						<div id="capa_brands" class="hide">
+							<ul>
+								<li><a class="lgo_telefonica" href="http://www.telefonica.com/es/telefonica_brands/at_identidad_marcas_telefonica.shtml" title="Ir a la página de Telef&oacute;nica.es">Telef&oacute;nica</a></li>
+								<li><a class="lgo_movistar" href="http://www.telefonica.com/es/telefonica_brands/at_identidad_marcas_movistar.shtml" title="Ir a la página de Movistar">Movistar</a></li>
+								<li><a class="lgo_o2" href="http://www.telefonica.com/es/telefonica_brands/at_identidad_marcas_o2.shtml" title="Ir a la página de O2">O2</a></li>
+								<li><a class="lgo_terra" href="http://www.telefonica.com/es/telefonica_brands/at_identidad_marcas_terra.shtml" title="Ir a la página de Terra">Terra</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="worldwide"> <a id="a_worldwide" href="http://www.telefonica.com/es/telefonica_worldwide/telefonica_worldwide.shtml" title="Ir a Presencia Mundia">Presencia Mundial</a>
+						<div id="capa_worldwide" class="hide">
+							<div class="paises">
+								<ul id="ul_paises">
+									<li><a href="#" title="Ir a Alemania">Alemania</a>
+										<ul>
+											<li><a href="http://www.telefonica.de/">Telef&oacute;nica</a></li>
+											<li><a href="http://www.o2online.de/">O2</a></li>
+										</ul>
+									</li>
+									<li><a href="#" title="Ir a Argentina">Argentina</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.ar/">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.ar/">Movistar</a></li>
+											<li><a href="http://www.terra.com.ar/">Terra</a></li>
+											<li><a href="http://www.atento.com.ar/">Atento</a></li>
+										</ul>
+									</li>
+									<li><a href="#" title="Ir a Brasil">Brasil</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.br/">Telef&oacute;nica</a></li>
+											<li><a href="http://www.terra.com.br/">Terra</a></li>
+											<li><a href="http://www.vivo.com.br/">Vivo</a></li>
+											<li><a href="http://www.atento.com.br/">Atento</a></li>
+										</ul>
+									</li>
+									<li><a href="#" title="Ir a Chile">Chile</a>
+										<ul>
+											<li><a href="http://www.telefonica.cl/">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.cl/">Movistar</a></li>
+											<li><a href="http://www.terra.cl/">Terra</a></li>
+											<li><a href="http://www.atentochile.cl/">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Colombia">Colombia</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.co" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.co" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.co" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Ecuador">Ecuador</a>
+										<ul>
+											<li><a href="http://www.movistar.com.ec" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.ec" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a España">España</a>
+										<ul>
+											<li><a href="http://www.telefonica.es" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.es" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.es" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.es" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a El Salvador">El Salvador</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.sv" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.sv" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.sv" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.com.sv" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Eslovaquia">Eslovaquia</a>
+										<ul>
+											<li><a href="http://www.sk.o2.com" title="Ir a O2 en ventana nueva" target="_blank">O<sub>2</sub></a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a EEUU">EEUU</a>
+										<ul>
+											<li><a href="http://www.us.telefonica.com" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.terra.com" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.com" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Guatemala">Guatemala</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.gt" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.gt" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.gt" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.com.gt" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Irlanda">Irlanda</a>
+										<ul>
+											<li><a href="http://www.o2online.ie" title="Ir a O2 en ventana nueva" target="_blank">O<sub>2</sub></a></li>
+										</ul>
+									</li>
+									<li><a href="#" title="Ir a Marruecos">Marruecos</a>
+										<ul>
+											<li><a href="http://www.atento.ma" title="Ir a Atento en ventana nueva" target="_blank" >Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a México">México</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.mx" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.mx" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.mx" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Nicaragua">Nicaragua</a>
+										<ul>
+											<li><a href="http://www.movistar.com.ni" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.ni" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Panamá">Panamá</a>
+										<ul>
+											<li><a href="http://www.movistar.com.pa" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.pa" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Per&uacute;">Per&uacute;</a>
+										<ul>
+											<li><a href="http://www.telefonica.com.pe" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.movistar.com.pe" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.pe" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.com.pe" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Puerto Rico">Puerto Rico</a>
+										<ul>
+											<li><a href="http://www.telefonica.pr/empresas" title="Ir a Telef&oacute;nica en ventana nueva" target="_blank">Telef&oacute;nica</a></li>
+											<li><a href="http://www.terra.com.pr" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+											<li><a href="http://www.atento.com.pr" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Reino Unido">Reino Unido</a>
+										<ul>
+											<li><a href="http://www.o2.co.uk" title="Ir a O2 en ventana nueva" target="_blank">O<sub>2</sub></a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Rep&uacute;blica Checa">Rep&uacute;blica Checa</a>
+										<ul>
+											<li><a href="http://www.cz.o2.com" title="Ir a O2 en ventana nueva" target="_blank">O<sub>2</sub></a></li>
+											<li><a href="http://www.atento.cz" title="Ir a Atento en ventana nueva" target="_blank">Atento</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Uruguay">Uruguay</a>
+										<ul>
+											<li><a href="http://www.movistar.com.uy" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.uy" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Ir a Venezuela">Venezuela</a>
+										<ul>
+											<li><a href="http://www.movistar.com.ve" title="Ir a Movistar en ventana nueva" target="_blank">Movistar</a></li>
+											<li><a href="http://www.terra.com.ve" title="Ir a Terra en ventana nueva" target="_blank">Terra</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="navinf">
+	<ul>
+		<li class="navinf_at"><a href="http://www.telefonica.com.ar/acercadetelefonica" title="Ir a Acerca de Telef&oacute;nica" target="_top">Acerca de Telef&oacute;nica</a></li>
+		<li class="navinf_po"><a href="http://www.telefonica.com.ar/saladeprensa" title="Ir a Sala de prensa" target="_top">Sala de prensa</a></li>
+		<li class="navinf_ir"><a href="http://www.telefonica.com.ar/accionistaseinversores" title="Ir a Accionistas e inversores" target="_top">Accionistas e inversores</a></li>
+		<li class="navinf_in"><a href="http://www.telefonica.com.ar/innovacion" title="Ir a Innovaci&oacute;n" target="_top">Innovaci&oacute;n</a></li>
+	</ul>
+	<div class="clear"></div>
+	<ul>
+		<li class="navinf_cr"><a href="http://www.telefonica.com.ar/responsabilidadcorporativa" title="Ir a RC y sostenibilidad" target="_top">RC y sostenibilidad</a></li>
+		<li class="navinf_sp"><a href="http://www.telefonica.com.ar/patrocinios" title="Ir a Patrocinios" target="_top">Patrocinios</a></li>
+		<li class="navinf_ft"><a href="http://www.telefonica.com.ar/fundaciontelefonica" title="Ir a Fundaci&oacute;n Telef&oacute;nica" target="_top">Fundaci&oacute;n Telef&oacute;nica</a></li>
+	</ul>
+</div>
+<!-- Fin de #navinf -->
+
+			</div>
+			<!-- Fin de #navsup -->
+
+          
+          <div class="clear"></div>
+        </div>
+        <!-- Fin #nav -->
+        <div class="clear"></div>
+      </div>
+      <!-- Fin de #cabecera-interior -->
+      <hr class="hide" />
+    </div>
+	<!-- Fin de #cabecera -->
+    <div id="contenido">
+        <div id="raiz"><span class="estasen">Estás en:</span>
+          <ul>
+            <li><a href="http://www.telefonica.com.ar" title="Ir a Inicio">Inicio</a></li>
+            <li><a href="404.shtml" title="Error"><strong class="actual">Error</strong></a>
+          </li>
+          </ul>
+        </div>
+        <!-- Fin de #raiz -->
+        <h1 id="titulo_pagina">Error 404</h1>
+        <div class="clear"></div>
+        <div class="cont_entradilla">
+            <p align="left">&nbsp;</p>
+            <p><span lang="ES-AR" xml:lang="ES-AR"><strong>P&aacute;gina no encontrada.</strong></span></p>
+      </div>
+<div class="clear"></div>
+        <div id="contenido_hoja_top"></div>
+        <div id="contenido_hoja">
+            <!-- Fin de #contizq -->
+            <div id="cont_100"> <!-- Fin .modulo -->
+                <div class="modulo">
+                    <div class="med">
+                        <div class="pc100">
+                            <div class="caja_texto"> 
+                                <p style="margin-bottom: 10px;"><strong>Mensaje de error</strong></p>
+                                <p>Si este error persiste es debido a que en estos momentos estamos actualizando el sitio o es posible que la p&aacute;gina ya no exista en el servidor, o que no hayas escrito correctamente la direcci&oacute;n URL o p&aacute;gina.</p>
+                                <p> </p>
+                                <p>Disculp&aacute; las molestias que pueda ocacionar este error.</p>
+                                <p> </p>
+                                <p style="margin-bottom: 10px;"><strong>Pod&eacute;s ir a:</strong></p>
+                                <p><a href="javascript:history.back(1)">La p&aacute;gina anterior e intentarlo de nuevo.</a></p>
+                                <p><a target="_top" href="http://www.telefonica.com.ar">La p&aacute;gina de inicio de Telef&oacute;nica.</a></p>
+                                <p><a href="https://web.telefonica.com.ar/online/portal/inicio/hogares/telefonia-fija/">La p&aacute;gina de atenci&oacute;n al cliente.</a></p>
+                                <div id="redes_sociales">
+                                    <p>Seguinos en:</p>
+                                    <p> </p>
+                                    <a target="_blank" href="http://www.facebook.com/TelefonicaComAr"><img alt="Facebook" title="Facebook" src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/facebook.png" /></a><a target="_blank" href="http://twitter.com/#!/TelefonicaComAr"><img alt="Twitter" title="Twitter" src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/twitter.png" /></a><a target="_blank"  href="http://www.youtube.com/user/Telefonicacomar"><img alt="Youtube" title="Youtube" src="http://www.telefonica.com.ar/corporativo/acercadetelefonica/img/youtube.png" /></a>
+                                </div>
+                          </div>
+                      </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+    
+                <!-- Fin .modulo --><!-- Fin .modulo --><!-- Fin .modulo --><!-- Fin .modulo --><!-- Fin .modulo -->
+            </div>
+<!-- Fin de #cont_der -->
+            <div class="clear"></div>
+        </div>
+		<!-- Fin #contenido_hoja -->
+        <div class="clear"></div>
+    </div>
+    <!-- Fin #contenido-->
+	<div id="pie">
+		<div id="pie-interior">
+			<span>© 2010 Telef&oacute;nica de Argentina S.A.</span>
+			<ul>
+				<li><a href="http://www.telefonica.com.ar/avisolegal">Todos los derechos reservados</a></li>
+				<li><a href="http://www.telefonica.com.ar/requerimientos/">Requerimientos Informáticos</a></li>
+			</ul>
+        </div><!-- pie-interior -->
+    </div><!-- pie -->
+    
+    
+    <div id="pie_map">
+        <div id="pie_site_map">
+         
+        <div class="col_enlaces first"><!-- Acerca de telefonica -->  
+            <div class="titulo_enlaces"><a href="http://www.telefonica.com.ar/acercadetelefonica/">Acerca de Telefonica</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li><a href="http://www.telefonica.com.ar/acercadetelefonica" title="Ir a Acerca de Telef&oacute;nica" target="_top">Acerca de Telef&oacute;nica</a></li>
+                    <li><a href="http://www.telefonica.com.ar/saladeprensa" title="Ir a Sala de prensa" target="_top">Sala de prensa</a></li>
+                    <li><a href="http://www.telefonica.com.ar/accionistaseinversores" title="Ir a Accionistas e inversores" target="_top">Accionistas e inversores</a></li>
+                    <li><a href="http://www.telefonica.com.ar/innovacion" title="Ir a Innovaci&oacute;n" target="_top">Innovaci&oacute;n</a></li>
+                    <li><a href="http://www.telefonica.com.ar/responsabilidadcorporativa" title="Ir a RC y sostenibilidad" target="_top">RC y sostenibilidad</a></li>
+                    <li><a href="http://www.telefonica.com.ar/patrocinios" title="Ir a Patrocinios" target="_top">Patrocinios</a></li>
+                    <li><a href="http://www.telefonica.com.ar/fundaciontelefonica" title="Ir a Fundaci&oacute;n Telef&oacute;nica" target="_top">Fundaci&oacute;n Telef&oacute;nica</a></li>
+                </ul>
+            </div>
+        </div><!-- Acerca de telefonica -->  
+        <div class="col_enlaces"><!-- Sala de Prensa --> 
+            <div class="titulo_enlaces"><a href="http://saladeprensa.telefonica.com/">Sala de Prensa</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/notasdeprensa/notasdeprensa.jsp&telem=3&id=1&idm=es&pais=1">Noticias</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/imagenes/imagenes.jsp&id=6&idm=es&pais=1">Fotos</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/multimedia/multimedia.jsp&telem=101&id=94&idm=es&pais=1">Videos</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/cdoc/cdocsub.jsp&telem=36&id=69&idm=es&pais=1">Centro de documentaci&oacute;n</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/faq/faq.jsp&telem=1&id=121&idm=es&pais=1">Preguntas frecuentes</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/atencion/atencion.jsp&atencio=atencion&id=122&idm=es&pais=1">Contacto</a></li>
+                    <li><a href="http://saladeprensa.telefonica.com/jsp/base.jsp?contenido=/jsp/medios/medio.jsp&telem=100&id=120&idm=es&pais=1">Telef&oacute;nica en los medios</a></li>
+                </ul>
+            </div>
+        </div><!-- Sala de Prensa --> 
+        
+        
+        <div class="col_enlaces"><!-- Accionistas e Inversores --> 
+            <div class="titulo_enlaces"><a href="http://www.telefonica.com.ar/accionistaseinversores/">Accionistas e Inversores</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/inversor.shtml" title="Informaci&oacute;n de interés">Informaci&oacute;n de interés</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/resultados.shtml" title="Informes de Resultados">Informes de Resultados</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/balances.shtml" title="Balances Trimestrales">Balances Trimestrales</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/subsidiarias.shtml" title="Balances trimestrales de empresas relacionadas">Balances trimestrales de empresas relacionadas</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/anuales.shtml" title="Memorias y balances anuales">Memorias y balances anuales</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/acciones.shtml" title="Informaci&oacute;n sobre las acciones">Informaci&oacute;n sobre las acciones</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/prospectos.shtml" title="Prospectos ONs / Canjes">Prospectos ONs/Canjes</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/20f.shtml" title="20 F">20F</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/otros.shtml" title="Otros documentos">Otros documentos</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/codigoetica.shtml" title="C&oacute;digo de ética">C&oacute;digo de ética</a></li>
+                    <li ><a href="https://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/contacto.shtml" title="Contáctenos">Contáctenos</a></li>
+                    <li><a href="http://info.telefonica.es/es/shareholders_investors/html/home/index.shtml" title="Accionistas e inversores de Telef&oacute;nica S.A">Accionistas e inversores de Telef&oacute;nica S.A</a></li>
+                    <li ><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/inversores/inversor_i.shtml" title="English version">English version</a></li>
+                </ul>
+            </div>
+        </div><!-- Accionistas e Inversores --> 
+         
+        <div class="col_enlaces"><!-- Innovaci&oacute;n RC y sostenibilidad -->
+            <div class="titulo_enlaces"><a href="http://www.telefonica.com.ar/responsabilidadcorporativa/">Innovaci&oacute;n RC <br /> y sostenibilidad</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2010/index.shtml" title="Abrir Informe RC 2010 en PDF">Informe RC 2010</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2009/index.shtml" title="Abrir Informe RC 2009 en PDF">Informe RC 2009</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2008/index.shtml" title="Abrir Informe RC 2008 en PDF">Informe RC 2008</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2007/index.shtml" title="Abrir Informe RC 2007 en PDF">Informe RC 2007</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2006/index.shtml" title="Abrir Informe RC 2006 en PDF">Informe RC 2006</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2005/index.shtml" title="Abrir Informe RC 2005 en PDF">Informe RC 2005</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/responsabilidad/2004/index.shtml" title="Abrir Informe RC 2004 en PDF">Informe RC 2004</a></li>
+                </ul> 
+            </div>
+        </div><!-- Innovaci&oacute;n RC y sostenibilidad --> 
+        
+        <div class="col_enlaces"><!-- Patrocinios-->
+            <div class="titulo_enlaces"><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/patrocinios/">Patrocinios</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/patrocinios/info_bicentenario.shtml">Cultura</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/patrocinios/info_capsula.shtml">Tecnolog&iacute;a</a></li>
+                    <li><a href="http://www.telefonica.com.ar/corporativo/acercadetelefonica/ar/patrocinios/info_tedx.shtml">Sociedad</a></li>
+                </ul>
+            </div>
+        </div><!-- Patrocinios-->
+        
+        <div class="col_enlaces second"><!-- Fundaci&oacute;n Telef&oacute;nica --> 
+            <div class="titulo_enlaces"><a href="http://www.fundacion.telefonica.com.ar/">Fundaci&oacute;n Telef&oacute;nica</a></div>
+            <div class="clear"></div>
+            <div class="pc25 nobackground left">
+                <ul class="ul_enlaces_home">
+                    <li><a href="http://www.fundacion.telefonica.com.ar/ftportal/educared/index.htm">Educared</a></li>
+                    <li><a href="http://www.fundacion.telefonica.com.ar/ftportal/pronino/index.htm">Proniño</a></li>
+                    <li><a href="http://www.fundacion.telefonica.com.ar/ftportal/forum/index.htm">Debate y Conocimiento</a></li>
+                    <li><a href="http://www.fundacion.telefonica.com.ar/ftportal/voluntarios/index.htm">Voluntarios Telef&oacute;nica</a></li>
+                    <li><a href="http://www.fundacion.telefonica.com.ar/ftportal/arteytecnologia/index.htm">Arte y Tecnolog&iacute;a</a></li>
+                </ul>
+            </div>
+        </div><!-- Fundaci&oacute;n Telef&oacute;nica -->   
+        </div><!-- pie_site_map -->  
+   </div><!-- pie-map -->  
+     
+	
+ 
+</div>
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2009 Nielsen Online -->
+<script type="text/javascript" src="//secure-uk.imrworldwide.com/v60.js">
+</script>
+<script type="text/javascript">
+ var pvar = { cid: "es-telargentina", content: "0", server: "secure-uk" };
+ var trac = nol_t(pvar);
+ trac.record().post();
+</script>
+<noscript>
+ <div>
+ <img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=es-telargentina&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+ </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+<!-- Google Analytics -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-360936-1";
+urchinTracker();
+</script>
+<!-- END Google Analytics -->
+
+</body>
+</html>

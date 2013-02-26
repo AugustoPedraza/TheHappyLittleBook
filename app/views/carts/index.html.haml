@@ -1,17 +1,20 @@
-%h1 Listing carts
-
-%table
+%h3{style: "text-align:center"}
+  Listado de compras
+%br
+%br
+%table.table
   %tr
     %th
+    %th Fecha
+    %th Cant.
+    %th Total
     %th
-    %th
-
-  - @carts.each do |cart|
+  - @purchases.each_with_index do |purchase, i|
     %tr
-      %td= link_to 'Show', cart
-      %td= link_to 'Edit', edit_cart_path(cart)
-      %td= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' }
-
+      %td= i + 1
+      %td= purchase.updated_at.strftime("%e/%m/%Y")
+      %td= purchase.items_count
+      %td= "$ #{purchase.total}"
+      %td= link_to "Ver compra", cart_url(purchase), class: "btn btn-primary"
 %br
-
-= link_to 'New Cart', new_cart_path
+%br

@@ -2,6 +2,10 @@ class Cart < ActiveRecord::Base
   belongs_to :user
   has_many :cart_items, dependent: :destroy
 
+  scope :purchases_by_user,   lambda{ |user_id| where("user_id = ? AND is_purchase = ?", user_id, true).order('updated_at DESC') }
+  scope :purchases,           where(is_purchase: true).order("updated_at DESC")
+  # scope :for_invoice,       lambda {|project, from, to| where(:project_id => project, :date => from..to) }
+
   #cuando guarde el modelo como una compra, tengo que actualizar el stock..
 
   def total
@@ -13,6 +17,8 @@ class Cart < ActiveRecord::Base
   end
 
   def make_purchase
-    update_attribute(:is_purchase, true)
+    self.is_purchase    = true
+    self.purchase_date  = DateTime.now
+    self.save
   end
 end

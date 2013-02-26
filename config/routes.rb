@@ -22,10 +22,13 @@ TheHappyLitteBook::Application.routes.draw do
   resources :books, :only => [:index]
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'books#index'
   end
 
-  root :to => "home#index"
+  root :to => "books#index"
 
   devise_for :users
+
+  get "/purchases", :to => "carts#index", as: :purchases
+
 end
