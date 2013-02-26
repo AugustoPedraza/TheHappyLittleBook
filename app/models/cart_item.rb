@@ -23,12 +23,12 @@ class CartItem < ActiveRecord::Base
     update_attribute(:quantity, new_quantity)
   end
 
+  def update_available_stock
+    book.update_stock(:sales, quantity)
+  end
+
   #Funcionalidad movida al controller.
   # def available_quantity
   #   book_inventory.quantity
   # end
-
-  #Tener en cuenta que, cuando cambio el precio de compra, tengo que
-  #agregar un nuevo registro, copiando la informacion del ultimo, y poniendole
-  #el precio nuevo.
 end

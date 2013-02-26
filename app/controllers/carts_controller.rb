@@ -1,5 +1,5 @@
 class CartsController < InheritedResources::Base
-  before_filter :authenticate_user!, :only => [:show, :index]
+  before_filter :authenticate_user!, :only => [:show, :index, :update]
 
   def index
     @purchases = Cart.purchases_by_user(current_user.id)
@@ -12,7 +12,6 @@ class CartsController < InheritedResources::Base
       format.html {}
       format.pdf { render :pdf => "my_pdf",  :layout => 'layouts/pdf'}
     end
-    #Esto debería ser accedido via un link
   end
 
   def edit
@@ -39,14 +38,12 @@ class CartsController < InheritedResources::Base
     cart.cart_items.each{ |item| item.destroy unless purchased_items.include?(item.id)}
 
     cart.make_purchase
-    puts "="*50
-    puts current_user
-    puts "="*50
+    # puts "="*50
+    # puts current_user
+    # puts "="*50
     cart.user = current_user
     cart.save
     session[:cart_id] = nil
-
-    #Recordar borrar los items que no estan presentes en los parametros
 
     respond_to do |format|
       format.js do

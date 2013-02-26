@@ -8,6 +8,8 @@ class Cart < ActiveRecord::Base
 
   #cuando guarde el modelo como una compra, tengo que actualizar el stock..
 
+
+
   def total
     cart_items.map(&:subtotal).sum
   end
@@ -19,6 +21,9 @@ class Cart < ActiveRecord::Base
   def make_purchase
     self.is_purchase    = true
     self.purchase_date  = DateTime.now
+
+    cart_items.map(&:update_available_stock)
+
     self.save
   end
 end

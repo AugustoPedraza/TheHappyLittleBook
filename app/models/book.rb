@@ -34,4 +34,8 @@ class Book < ActiveRecord::Base
   def available_stock
     book_inventories.last.quantity
   end
+
+  def update_stock(type, quantity)
+    book_inventories.last.update_stock(type, quantity)
+  end
 end
