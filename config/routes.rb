@@ -1,8 +1,4 @@
 TheHappyLitteBook::Application.routes.draw do
-  # get "purchases/new"
-
-  # get "purchases_controller/new"
-
   resources :cart_items
 
   devise_scope :user do
@@ -29,6 +25,6 @@ TheHappyLitteBook::Application.routes.draw do
 
   devise_for :users
 
-  get "/purchases", :to => "carts#index", as: :purchases
+  get "/purchases", :to => "carts#index", as: :sales
 
 end

@@ -2,11 +2,11 @@ class CartsController < InheritedResources::Base
   before_filter :authenticate_user!, :only => [:show, :index, :update]
 
   def index
-    @purchases = Cart.purchases_by_user(current_user.id)
+    @sales = Cart.sales_by_user(current_user.id)
   end
 
   def show
-    purchase = Cart.find(params[:id])
+    @sale = Cart.find(params[:id])
 
     respond_to do |format|
       format.html {}
@@ -22,22 +22,24 @@ class CartsController < InheritedResources::Base
   end
 
   def update
-    cart             = Cart.find(params[:id])
-    purchased_items  = []
-    
+    cart           = Cart.find(params[:id])
+    updated_items  = []
+
     params[:items].values.each do |hash|
-      id              = hash[:id].to_i
-      quantity        = hash[:quantity].to_i
+      id         = hash[:id].to_i
+      quantity   = hash[:quantity].to_i
 
-      purchased_items << id
-      item            = cart.cart_items.find(id)
+      updated_items << id
+      cart_item     =  cart.cart_items.find(id)
 
-      item.update_quantity(quantity)
+      cart_item.update_quantity(quantity)
     end
 
-    cart.cart_items.each{ |item| item.destroy unless purchased_items.include?(item.id)}
+    cart.cart_items.each do |cart_item|
+      cart_item.destroy unless updated_items.include?(cart_item.id)
+    end
 
-    cart.make_purchase
+    cart.make_sale
     # puts "="*50
     # puts current_user
     # puts "="*50

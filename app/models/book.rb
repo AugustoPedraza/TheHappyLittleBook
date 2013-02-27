@@ -3,7 +3,7 @@
 class Book < ActiveRecord::Base
   default_scope order('published_at')
 
-  scope :with_stock, joins(:book_inventories).where("book_inventories.quantity > 0").order("created_at ASC")
+  scope :with_stock, joins(:book_inventories).where("book_inventories.quantity > 0").order("created_at ASC").uniq
 
   has_and_belongs_to_many :authors
   belongs_to :publisher

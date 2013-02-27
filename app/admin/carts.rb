@@ -2,7 +2,7 @@ ActiveAdmin.register Cart, as: "Compras" do
 
   controller do
     def scoped_collection
-      end_of_association_chain.purchases
+      end_of_association_chain.sales
     end
   end
 
@@ -12,21 +12,21 @@ ActiveAdmin.register Cart, as: "Compras" do
   actions :index, :show
 
   index do
-    column ("Fecha") { |purchase| purchase.purchase_date.strftime("%d - %B - %Y") }
+    column ("Fecha") { |sale| sale.sale_date.strftime("%d - %B - %Y") }
     column "Items", :items_count
-    column("Total") { |purchase| "$ #{purchase.total}" }
-    column("Usuario") { |purchase| purchase.user.name }
+    column("Total") { |sale| "$ #{sale.total}" }
+    column("Usuario") { |sale| sale.user.name }
 
     default_actions
   end
 
   show do
     attributes_table do
-      row ("Fecha") { |purchase| purchase.purchase_date.strftime("%d - %B - %Y") }
-      row ("Items") { |purchase| purchase.items_count }
-      row("Total") { |purchase| "$ #{purchase.total}" }
-      row("Usuario") { |purchase| purchase.user.name }
-      row("compra") do |purchase|
+      row ("Fecha") { |sale| sale.sale_date.strftime("%d - %B - %Y") }
+      row ("Items") { |sale| sale.items_count }
+      row("Total") { |sale| "$ #{sale.total}" }
+      row("Usuario") { |sale| sale.user.name }
+      row("compra") do |sale|
         table = "
           <br/>
           <br/>
@@ -41,7 +41,7 @@ ActiveAdmin.register Cart, as: "Compras" do
                 <th>Subtotal</th>
               </tr>"
 
-        purchase.cart_items.each do |item|
+        sale.cart_items.each do |item|
           table <<
             " <tr>
                 <td align= 'center'>

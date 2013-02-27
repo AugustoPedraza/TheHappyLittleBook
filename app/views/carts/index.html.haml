@@ -9,12 +9,12 @@
     %th Cant.
     %th Total
     %th
-  - @purchases.each_with_index do |purchase, i|
+  - @sales.each_with_index do |sale, i|
     %tr
       %td= i + 1
-      %td= purchase.updated_at.strftime("%e/%m/%Y")
-      %td= purchase.items_count
-      %td= "$ #{purchase.total}"
-      %td= link_to "Ver compra", cart_url(purchase), class: "btn btn-primary"
+      %td= sale.updated_at.strftime("%e/%m/%Y")
+      %td= sale.items_count
+      %td= "$ #{sale.total}"
+      %td= link_to "Ver compra", cart_url(sale), class: "btn btn-primary"
 %br
 %br

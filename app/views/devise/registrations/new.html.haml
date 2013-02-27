@@ -1,10 +1,10 @@
-%h2 Sign up
+%h4 Registrarse
 = simple_form_for(resource, :as => resource_name, :url => create_registration_path, :html => {:class => 'form-vertical' }) do |f|
   = f.error_notification
   = display_base_errors resource
-  = f.input :name, :autofocus => true
-  = f.input :email, :required => true
-  = f.input :password, :required => true
-  = f.input :password_confirmation, :required => true
-  = f.button :submit, 'Sign up', :class => 'btn-primary'
+  = f.input :name, :autofocus => true, label: "Nombre"
+  = f.input :email, :required => true, label: "Email"
+  = f.input :password, :required => true, label: "Contraseña"
+  = f.input :password_confirmation, :required => true, label: "Confirmacion de la contraseña"
+  = f.button :submit, 'Crear cuenta', :class => 'btn-primary'
 = render "devise/shared/links"

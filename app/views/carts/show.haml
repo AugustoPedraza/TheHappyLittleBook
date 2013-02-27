@@ -2,9 +2,9 @@
   Compra actual
 %br
 %br
-%p= resource.updated_at.strftime("Fecha: %e de %B del %Y")
-%p== Items: <b>#{resource.items_count}</b>
-%h5= "Total: $ #{resource.total}"
+%p= @sale.updated_at.strftime("Fecha: %e de %B del %Y")
+%p== Items: <b>#{@sale.items_count}</b>
+%h5= "Total: $ #{@sale.total}"
 %br
 %br
 %table.table{border: '0px', style:'margin-bottom: -10px'}
@@ -15,7 +15,7 @@
     %th Título
     %th P.U
     %th Subtotal
-  - resource.cart_items.each_with_index do |item, i|
+  - @sale.cart_items.each_with_index do |item, i|
     %tr
       %td= i +1
       %td= item.quantity
@@ -24,5 +24,5 @@
       %td= item.book.current_price
       %td= item.subtotal
   %tr
-    %td{colspan: 3}= link_to "Ver todas las compras", purchases_path, class: "btn btn-info", style: "margin-top: 90px"
-    %td{colspan: 3, style: 'text-align: right'}= link_to "Guardar PDF", cart_url(resource, format: :pdf), target: :_blank, class: "btn btn-primary", style: "margin-top: 90px"
+    %td{colspan: 3}= link_to "Ver todas las compras", sales_path, class: "btn btn-info", style: "margin-top: 90px"
+    %td{colspan: 3, style: 'text-align: right'}= link_to "Guardar PDF", cart_url(@sale, format: :pdf), target: :_blank, class: "btn btn-primary", style: "margin-top: 90px"

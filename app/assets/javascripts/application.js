@@ -21,12 +21,12 @@ $(document).ready(function() {
 
   //Cart edition
   bindChangeQuantity();
-  bindMakePurchase();
+  bindMakeSale();
   bindRemoveBook();
 });
 
-function bindMakePurchase(){
-  var $btn = $('input[type=submit].btn-make-purchase');
+function bindMakeSale(){
+  var $btn = $('input[type=submit].btn-make-sale');
 
   if ($btn.length == 0){console.log("no encontrado...");return;}
 
@@ -68,7 +68,7 @@ function addToolTipToCart(){
       functionBefore: function(origin, continueTooltip) {
         origin.data('tooltipsterContent', $('#hidden-cart').html());
         continueTooltip();
-        bindMakePurchase();
+        bindMakeSale();
       },
       theme: '.tooltipster-light',
       interactive: true
@@ -125,7 +125,7 @@ function calculateTotal(){
 
 function updateTotals(items, amount){
   if(items == 0){
-    var url  = $('tr.cart-actions td input[type=submit].btn-make-purchase')
+    var url  = $('tr.cart-actions td input[type=submit].btn-make-sale')
                   .attr('url-redirect-data');
 
     alert("El carrito está vacio!");

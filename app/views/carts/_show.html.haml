@@ -39,5 +39,5 @@
       -if cart.items_count > 0
         %tr.cart-actions
           %td{colspan: 2}= button_to 'Edit cart', edit_cart_path(cart), class: 'btn-info', method: 'get'
-          %td{colspan: 2}= button_to 'Make purchase', '#', 'url-data' => cart_path(cart), 'url-redirect-data' => books_url, class: 'btn-success btn-make-purchase'
+          %td{colspan: 2}= button_to 'Make purchase', '#', 'url-data' => cart_path(cart), 'url-redirect-data' => books_url, class: 'btn-success btn-make-sale'
 %br
