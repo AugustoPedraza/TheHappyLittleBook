@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin_user!
-    puts "="*50
-    puts "El usuario tiene role admin???"
-    puts current_user.has_role? :admin
-    puts "="*50
-    redirect_to new_user_session_path unless current_user.has_role? :admin
+    # puts "="*50
+    # puts "El usuario tiene role admin???"
+    # puts current_user.has_role? :admin
+    # puts "="*50
+    redirect_to new_user_session_path unless (current_user && current_user.has_role?(:admin))
     # unless current_user
     #   puts "="*50
     #   puts "Sin usuario..."
@@ -34,7 +34,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource_or_scope)
-    root_path
+    if current_user.has_role?(:admin)
+      admin_root_path
+    else
+      root_path
+    end
   end
 
   private

@@ -17,7 +17,7 @@
       %tr.item-data{"item-id-data" => item.id, "available-stock-data" => item.book.available_stock}
         %td{align: 'center'}= number_field_tag('name', value = item.quantity, min: 1, step: 1, class: 'quantity')
         %td{align: 'left', class: "book-name", style: 'width: 300px; padding-left: 50px'}= item.book.full_name
-        %td{align: 'center',  class: 'price'}= item.price
+        %td{align: 'center',  class: 'price'}= item.book_price
         %td.subtotal{align: 'right',  class: 'subtotal'}= item.subtotal
         %td
         %td

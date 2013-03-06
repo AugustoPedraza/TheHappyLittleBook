@@ -3,131 +3,63 @@ require 'faker'
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
-    Role.destroy_all
-    puts 'ROLES'
-    YAML.load(ENV['ROLES']).each do |role|
-      Role.find_or_create_by_name({ :name => role }, :without_protection => true)
-      puts 'role: ' << role
-    end
+    puts "> Populating your database. Please wait..."
+    puts "\n> *** Setting up populators."
 
-    User.destroy_all
-    puts 'DEFAULT USERS'
-    user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
-    puts 'user: ' << user.name
-    user.add_role :admin
+    authors   = Populator::Authors.new
+    books     = Populator::Books.new
+    inventory = Populator::Inventories.new
+    roles     = Populator::Roles.new
+    users     = Populator::Users.new
+    providers = Populator::Providers.new
+    sales     = Populator::Sales.new
+    purchases = Populator::Purchases.new
 
-    BookInventory.destroy_all
-    puts "Eliminando libros existentes.."
-    puts "Se han eliminado #{Book.destroy_all.count} libros."
-    puts "\n"
-    puts "Eliminando autores existentes.."
-    puts "Se han eliminado #{Author.destroy_all.count} autores."
-    
-    puts "Eliminando editoriales existentes.."
-    puts "Se han eliminado #{Publisher.destroy_all.count} editoriales."
+    puts "> *** Done!"
 
-    puts "\n"*3
-    puts "Creando editoriales..."
+    puts "\n> *** Populating authors."
+    authors.create!
+    puts "> *** Done!"
 
-    publishers_counter = ""
+    puts "\n> *** Populating books."
+    books.create!
+    puts "> *** Done!"
 
-    10.times do |i|
-      Publisher.create!(name: [Faker::Company.name, " publisher", i + 1].join(" "))
-      publishers_counter << "."
-      puts publishers_counter
-    end
-    puts "\n"
-    puts "Se crearon #{publishers_counter.size} editoriales..."
+    puts "\n> *** Populating inventory."
+    inventory.create!
+    puts "> *** Done!"
 
-    puts "\n"*3
-    puts "Creando libros..."
-    
-    books_counter = ""
+    puts "\n> *** Populating roles."
+    roles.create!(["admin", "user", "clerical worker", "worker"])
+    puts "> *** Done!"
 
-    publishers_id = Publisher.all.map(&:id)
+    puts "\n> *** Populating users."
 
-    50.times do |i|
-      Book.create!(title: [Faker::Name.name, "book", i + 1].join(" "),
-          description: Faker::Lorem.sentence(rand(40..50)),
-          isbn13: [rand(101..987), rand(51..87), rand(1214..8732), rand(201..987), i].join("-"),
-          published_at: (DateTime.yesterday - rand(500..2000)),
-          edition: rand(1..7), publisher_id: publishers_id.sample)
-      books_counter << "."
-      puts books_counter
-    end
+    users_with_role = [
+        ["admin", 'admin'],
+        ["liquidador", 'clerical worker'],
+        ["trabajador", 'worker'],
+        ["comprador 1"],
+        ["comprador 2"],
+        ["comprador 3"],
+        ["comprador 4"]
+    ]
 
-    puts "\n"
-    puts "Se crearon #{books_counter.size} libros..."
+    users.create!(users_with_role)
+    puts "> *** Done!"
 
-    puts "\n"*3
-    puts "Creando inventariado de libros..."
+    puts "\n> *** Populating providers."
+    providers.create!
+    puts "> *** Done!"
 
-    book_inventory_counter = ""
+    puts "\n> *** Populating sales."
+    sales.create!
+    puts "> *** Done!"
 
-    Book.all.each do |book|
-      quantity        = rand(3..12)
-      purchase_price  = rand(100.00..250.99)
-      purchased_units = quantity + rand(3..5)
-      sale_price      = (purchase_price * rand(0.1..0.62)) + purchase_price
+    puts "\n> *** Populating purchases."
+    purchases.create!
+    puts "> *** Done!"
 
-      inventory_hash = {
-        purchase_price:   purchase_price,
-        sale_price:       sale_price,
-        quantity:         quantity,
-        purchased_units:  purchased_units,
-        solds_units:      (purchased_units - quantity)
-      }
-
-      book.book_inventories.build(inventory_hash)
-      book.save!
-      book_inventory_counter << "."
-      puts book_inventory_counter
-    end
-
-    books_id = Book.all.map(&:id)
-
-    17.times do
-      quantity        = rand(3..12)
-      purchase_price  = rand(100.00..250.99)
-      purchased_units = quantity + rand(3..5)
-
-      inventory_hash = {
-        purchase_price:   purchase_price,
-        sale_price:       (purchase_price * rand(10.0..50.0)),
-        quantity:         quantity,
-        purchased_units:  purchased_units,
-        solds_units:      (purchased_units - quantity)
-      }
-
-      book = Book.find(books_id.sample)
-      book.book_inventories.build(inventory_hash)
-      book.save!
-      book_inventory_counter << "."
-      puts book_inventory_counter
-    end
-
-    puts "\n"
-    puts "Se crearon #{book_inventory_counter.size} inventarios..."
-
-    puts "\n"*3
-    puts "Creando autores..."
-
-    autores_total = 0
-    Book.all.each do |book|
-      authors_counter = ""
-      puts "\n"
-      j = rand(1..5)
-      puts "Creando #{j} autores para el libro: \"#{book.full_name}\"..."
-      j.times do |i|
-        book.authors.build(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
-        book.save
-        authors_counter << "."
-        puts authors_counter
-      end
-      autores_total += authors_counter.length
-    end
-
-    puts "\n"
-    puts "Se crearon #{autores_total.size} autores..."
+    puts "> Database Population process complete!"
   end
 end

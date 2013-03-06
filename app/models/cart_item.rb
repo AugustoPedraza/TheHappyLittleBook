@@ -6,16 +6,16 @@ class CartItem < ActiveRecord::Base
 
   default_scope order(:created_at)
 
-  validates :cart, :book, presence: true
+  validates :book, presence: true
 
-  attr_accessible :quantity, :price
+  attr_accessible :quantity, :price, :cart, :book, :book_id
 
   def subtotal
     price * quantity
   end
 
-  def price
-    book.current_price
+  def book_price
+    book ? book.current_price : 0
   end
 
   def update_quantity(value)
@@ -23,8 +23,13 @@ class CartItem < ActiveRecord::Base
     update_attribute(:quantity, new_quantity)
   end
 
+  #Register sale
   def update_available_stock
-    book.update_stock(:sales, quantity)
+    book.update_inventory(quantity)
+  end
+
+  def update_stock_and_price
+    book.update_inventory(quantity, price)
   end
 
   #Funcionalidad movida al controller.

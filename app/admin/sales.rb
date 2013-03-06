@@ -1,4 +1,5 @@
-ActiveAdmin.register Cart, as: "Compras" do
+ActiveAdmin.register Cart, as: "Ordenes de ventas" do
+  menu parent: "Ventas"
 
   controller do
     def scoped_collection

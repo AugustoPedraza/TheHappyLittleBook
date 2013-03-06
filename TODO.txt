@@ -2,3 +2,8 @@ Cuando cree una factura de compra, o venta, tengo que hacer los callbacks necesa
 
 
 Tambien, tengo que dejar el precio de venta ya fijado...
+
+###Comprobar que la actualizacion tanto de compras como de ventas, funcione adecuadamente...
+
+
+Usar activeadmin en español.

@@ -14,8 +14,12 @@ class User < ActiveRecord::Base
 
   after_create :default_role
 
+  def sales
+    Cart.sales_by_user(self.id)
+  end
+
   private
     def default_role
-      self.roles << Role.where(:name => 'user').first
+      self.roles << Role.where(:name => 'user').first unless self.roles.count > 0
     end
 end
