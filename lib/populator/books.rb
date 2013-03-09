@@ -20,7 +20,7 @@ module Populator
 
         book =  Book.create!( title: title, description: description, isbn13: isbn13,
                       published_at: published_at, edition: edition,
-                      publisher: Populator::Publisers.sample
+                      publisher: Populator::Publishers.sample
                      )
 
         book.authors << Populator::Authors.sample(rand(1..5))

@@ -1,5 +1,7 @@
 ActiveAdmin.register Cart, as: "Orden de compra" do
   menu parent: "Compras"
+  config.per_page = 10
+
 
   controller do
     def scoped_collection
@@ -10,6 +12,7 @@ ActiveAdmin.register Cart, as: "Orden de compra" do
 
   filter :provider
   filter :updated_at, label: "Fecha"
+  filter :calculated_total , as: :numeric_range, label: "Monto de la compra"
 
   index do
     column ("Fecha")    { |purchase| purchase.purchase_date.strftime("%d - %B - %Y") }
